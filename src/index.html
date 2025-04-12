@@ -11,8 +11,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M-Group</title>
     <link rel="stylesheet" href="assets/resources/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/resources/fancybox.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="assets/resources/swiper-bundle.min.js" defer></script>
+    <script src="assets/resources/fancybox.umd.js" defer></script>
     <script src="assets/js/main.js" defer></script>
 
 </head>
@@ -149,7 +151,7 @@
                         </div>
                     </div>
                     <div class="banner__right">
-                        <a href="#" class="banner__video__link">
+                        <a href="#" data-fancybox class="banner__video__link">
                             <span><strong>Посмотрите видео</strong> с подробным представлением деятельности нашей
                                 компании
                             </span>
@@ -158,11 +160,132 @@
                 </div>
             </section>
 
-            <section class="quiz"></section>
+            <section class="quiz">
+                <div class="container ">
+                    <div class="quiz__inner">
+                        <h2 class="title white">Получите коммерческое предложение</h2>
+                        <div class="quiz__description">
+                            <strong>Ответьте всего на 3 вопроса</strong> и наш менеджер сформирует для вас бесплатное
+                            индивидуальное коммерческое предложение
+                        </div>
+
+                        <form class="quiz__steps" id="quiz">
+                            <div class="step active" id="step-1">
+                                <span class="step__title">Шаг 1</span>
+                                <div class="step__label">Выберите приблизительную площадь поверхности
+                                    трубопроводов или других
+                                    систем</div>
+                                <div class="quiz__range">
+                                    <div class="range-value"></div><input type="range" name="step1" id="file-range"
+                                        min="10" max="100" step="5" value="20">
+                                    <div class="range__nums">
+                                        <div class="range-start">10 м²</div>
+                                        <div class="range-end">100 м²</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="step" id="step-2">
+                                <span class="step__title">Шаг 2</span>
+                                <div class="step__label">Где необходимо выполнить работы?</div>
+                                <div class="quiz__radios">
+                                    <label class="quiz__radio__box">
+                                        <input type="radio" class="quiz__radio__input" checked name="quiz2"
+                                            value="ИТП/Котельная">
+                                        <span>ИТП/Котельная</span>
+                                    </label>
+                                    <label class="quiz__radio__box">
+                                        <input type="radio" class="quiz__radio__input" name="quiz2"
+                                            value="Системы вентиляции">
+                                        <span>Системы вентиляции</span>
+                                    </label>
+                                    <label class="quiz__radio__box">
+                                        <input type="radio" class="quiz__radio__input" name="quiz2" value="Ёмкости">
+                                        <span>Ёмкости</span>
+                                    </label>
+                                    <label class="quiz__radio__box">
+                                        <input type="radio" class="quiz__radio__input" name="quiz2"
+                                            value="Холодцентры / обвязка чиллеров">
+                                        <span>Холодцентры / обвязка чиллеров</span>
+                                    </label>
+                                    <label class="quiz__radio__box">
+                                        <input type="radio" class="quiz__radio__input" name="quiz2" value="Теплотрассы">
+                                        <span>Теплотрассы</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="step" id="step-3">
+                                <span class="step__title">Шаг 3</span>
+                                <div class="step__label">Вид работы?</div>
+                                <div class="quiz__radios">
+                                    <label class="quiz__radio__box">
+                                        <input type="radio" class="quiz__radio__input" checked name="quiz3"
+                                            value="Поставка материалов для теплоизоляции ">
+                                        <span>Поставка материалов для теплоизоляции </span>
+                                    </label>
+                                    <label class="quiz__radio__box">
+                                        <input type="radio" class="quiz__radio__input" checked name="quiz3"
+                                            value="Монтаж окожушки">
+                                        <span>Монтаж окожушки</span>
+                                    </label>
+                                    <label class="quiz__radio__box">
+                                        <input type="radio" class="quiz__radio__input" checked name="quiz3"
+                                            value="Поставка окожушки">
+                                        <span>Поставка окожушки</span>
+                                    </label>
+                                    <label class="quiz__radio__box">
+                                        <input type="radio" class="quiz__radio__input" checked name="quiz3"
+                                            value="Монтаж теплоизоляции">
+                                        <span>Монтаж теплоизоляции</span>
+                                    </label>
+
+                                </div>
+                            </div>
+
+
+                            <div class="quiz__buttons">
+                                <button type="button" disabled
+                                    class="quiz__btn main-btn btn-reset quiz__prev__btn"><svg>
+                                        <use xlink:href="assets/img/sprite.svg#arrow-right"></use>
+                                    </svg> <span>Назад</span></button>
+                                <button type="button"
+                                    class="quiz__btn main-btn white-btn btn-reset quiz__next__btn"><span>Далее</span>
+                                    <svg>
+                                        <use xlink:href="assets/img/sprite.svg#arrow-right"></use>
+                                    </svg></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
 
             <section class="products">
                 <div class="container products__inner">
-                    
+                    <div class="subtitle products__subtitle">Наша продукция</div>
+                    <h2 class="title products__title">Эффективная теплоизоляция для вашего бизнеса</h2>
+                    <div class="products__desctiption desctiption">
+                        Мы знаем, как продлить срок службы изоляции на 10+ лет. Наши решения помогают сократить затраты
+                        на ремонт и обслуживание оборудования. Работаем с нефтехимией, энергетикой, строительством и
+                        промышленными предприятиями
+                    </div>
+
+                    <div class="products__cats">
+                        <div class="products__cat" style="background-image: url(assets/img/base/product-cat-1.png)">
+                            <h3 class="products__cat__name">Окожушка</h3>
+                            <div class="products__cat__text">Защитный кожух для теплоизоляции труб и оборудования, предотвращающий механические повреждения, воздействие влаги и ультрафиолета</div>
+                        </div>
+                        <div class="products__cat" style="background-image: url(assets/img/base/product-cat-2.png)">
+                            <h3 class="products__cat__name">Термочехлы</h3>
+                            <div class="products__cat__text">Cъемные многослойные утеплители, предназначенные для защиты труб, оборудования и арматуры от теплопотерь, перегрева и внешнего воздействий</div>
+                        </div>
+                        <div class="products__cat" style="background-image: url(assets/img/base/product-cat-3.png)">
+                            <h3 class="products__cat__name">Теплоизоляционные изделия</h3>
+                            <div class="products__cat__text">Материалы и конструкции, предназначенные для снижения теплопотерь и защиты оборудования и трубопроводов от перегрева или охлаждения</div>
+                        </div>
+                        <div class="products__cat" style="background-image: url(assets/img/base/product-cat-4.png)">
+                            <h3 class="products__cat__name">Аксессуары для теплоизоляции</h3>
+                            <div class="products__cat__text">Комплектующие и дополнительные элементы, используемые для монтажа, защиты и продления срока службы теплоизоляционных материалов</div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>

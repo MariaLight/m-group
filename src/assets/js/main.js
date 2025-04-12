@@ -169,5 +169,61 @@ document.addEventListener('DOMContentLoaded', function () {
     //     Fancybox.bind('[data-fancybox]', {
     //     });
     // }
+
+    const rangeWrappers = document.querySelectorAll('.quiz__range');
+    if (rangeWrappers) {
+        rangeWrappers.forEach((item) => {
+            const range = item.querySelector('input[type="range"]'),
+                rangeV = item.querySelector('.range-value'),
+                setValue = () => {
+                    const
+                        newValue = Number((range.value - range.min) * 100 / (range.max - range.min)),
+                        newPosition = 10 - (newValue * 0.2);
+                    rangeV.innerHTML = `<span>${range.value}</span>`;
+                    rangeV.style.left = `calc(${newValue}% + (${newPosition}px))`;
+                };
+            setValue();
+            range.addEventListener('input', setValue);
+        })
+    }
+
+    const quizForm = document.querySelector('#quiz');
+    const quizSteps = quizForm.querySelectorAll('.step');
+    const quizPrevButton = quizForm.querySelector('.quiz__prev__btn');
+    const quizNextButton = quizForm.querySelector('.quiz__next__btn');
+    let counter = 1;
+    const stepsAmount = quizSteps.length;
+
+    const removeActiveStyles = (elems) => elems.forEach((item) => item.classList.remove('active'));
+
+    const addActiveStyleOnQuizStep = (elems, counter) => {
+        removeActiveStyles(elems);
+        console.log(elems);
+        elems[counter - 1].classList.add('active');
+    }
+
+    quizNextButton.addEventListener('click', () => {
+        counter += 1;
+        addActiveStyleOnQuizStep(quizSteps, counter);
+        if (counter > 1) {
+            quizPrevButton.disabled = false;
+        }
+        if (stepsAmount === counter) {
+            quizNextButton.querySelector('span').textContent = 'Отправить данные';
+            quizNextButton.classList.add('send-quiz');
+        }
+    })
+    quizPrevButton.addEventListener('click', () => {
+        counter -= 1;
+        addActiveStyleOnQuizStep(quizSteps, counter);
+        if (counter === 1) {
+            quizPrevButton.disabled = true;
+        }
+        if (stepsAmount !== counter) {
+            quizNextButton.querySelector('span').textContent = 'Далее';
+            quizNextButton.classList.remove('send-quiz');
+
+        }
+    })
 })
 
