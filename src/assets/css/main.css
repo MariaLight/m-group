@@ -1558,7 +1558,9 @@ input[type=range]::-webkit-slider-thumb {
     height: .5rem;
     margin-top: 0;
 }
-.swiper-button-next:after, .swiper-button-prev:after {
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
     content: '';
     background-image: url(../img/svg/arrow-right-wide.svg);
     background-size: cover;
@@ -1572,4 +1574,203 @@ input[type=range]::-webkit-slider-thumb {
 
 .swiper-button-prev {
     transform: scale(-1, 1);
+}
+
+/* About callback  */
+.about__callback {
+    background-color: var(--blue);
+    background-image: url(../img/base/about-cta.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 2rem;
+    padding: 5rem 7rem 5rem 35rem;
+    margin: 4rem 0;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+    color: #fff;
+}
+
+.about__callback__title {
+    font-size: 2.6rem;
+    max-width: 37rem;
+    margin-bottom: 0 !important;
+}
+
+.about__callback__text {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+    font-weight: 500;
+}
+
+/* Delivery  */
+.delivery {
+    background-image: url(../img/base/map.png);
+    background-size: cover;
+    background-position: top left;
+    background-repeat: no-repeat;
+    padding: 7rem 0 14rem;
+}
+
+.delivery__inner {
+    padding-left: 39.5rem;
+    position: relative;
+}
+
+.delivery__subtitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.delivery__decsription {
+    margin-bottom: 6.4rem;
+    text-wrap: balance;
+    font-weight: 400;
+}
+
+.delivery__cost {
+    max-width: 57rem;
+    margin-left: 10rem;
+}
+
+.delivery__cost__title {
+    font-family: 'DrukWideCyr';
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.delivery__cost__title::before {
+    content: '';
+    width: 3.8rem;
+    height: 1px;
+    background: var(--green);
+    display: inline-block;
+    margin-right: 1.6rem;
+}
+
+.delivery__cost__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.delivery__cost__item {
+    background-color: #DFEDE3;
+    padding: 2rem;
+    border-radius: .8rem;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+.delivery__cost__item__price {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin-bottom: 1.1rem;
+    font-weight: 700;
+    color: var(--green);
+    letter-spacing: -0.02em;
+}
+
+.display-flex {
+    display: flex;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.delivery__cost__text {
+    text-wrap: balance;
+    position: relative;
+    padding-left: 1.8rem;
+}
+
+.delivery__cost__text::before {
+    content: '';
+    position: absolute;
+    top: .8rem;
+    width: .8rem;
+    height: .8rem;
+    display: block;
+    border-radius: 50%;
+    background-color: var(--green);
+    left: 0;
+}
+
+.delivery__areas {
+    width: 41rem;
+    height: 41rem;
+    background-image: url(../img/base/delivery-area.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -8rem;
+    left: -6.2rem;
+}
+
+.delivery__area__moscow {
+    font-family: 'DrukWideCyr';
+    font-size: 1.1rem;
+    line-height: 1.3;
+    color: var(--white);
+    font-weight: 700;
+    text-align: center;
+    background-color: var(--green);
+    padding: .5rem 1.3rem;
+    border-radius: .8rem;
+    text-transform: uppercase;
+    width: fit-content;
+    position: absolute;
+    top: 13.3rem;
+    left: 10.6rem;
+}
+
+.delivery__area {
+    background-color: #fff;
+    border-radius: .7rem;
+    padding: .5rem 1.3rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--blue);
+    width: fit-content;
+    text-align: center;
+    box-shadow: 0px 12.41px 42.2px 0px #0207111F;
+    position: absolute;
+}
+
+.delivery__area__2 {
+    bottom: 13.8rem;
+    right: 4.1rem;
+}
+
+.delivery__area__3 {
+    bottom: 2.2rem;
+    right: 10.8rem;
+}
+
+.delivery__area::after {
+    content: '';
+    border: 1.5rem solid transparent;
+    border-top: 1.5rem solid var(--white);
+    border-radius: 2px;
+    position: absolute;
+    bottom: -2.5rem;
+    left: 50%;
+    transform: translate(-50%);
+    box-shadow: 0px 12.41px 42.2px 0px #0207111F;
+
 }
