@@ -127,6 +127,23 @@ document.addEventListener('DOMContentLoaded', function () {
             type: 'fraction',
         },
     });
+    var swiperCases = new Swiper(".swiper-cases", {
+        loop: false,
+        centeredSlides: true,
+        spaceBetween: 100,
+        slidesPerView: 1,
+        effect: 'fade',
+
+        navigation: {
+            nextEl: '.swiper-cases .swiper-button-next',
+            prevEl: '.swiper-cases .swiper-button-prev',
+        },
+        // If we need pagination
+        pagination: {
+            el: '.swiper-cases .swiper-pagination',
+            type: 'fraction',
+        },
+    });
 
     // const readmoreBtn = document.querySelector('#readmore');
     // const readmoreText = document.querySelector('.hidden');
