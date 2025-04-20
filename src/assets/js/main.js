@@ -194,6 +194,65 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         },
     });
+    var swiperLettersContent = new Swiper(".letters__content__swiper", {
+        loop: false,
+        centeredSlides: true,
+        spaceBetween: 100,
+        slidesPerView: 1,
+        effect: 'fade',
+        navigation: {
+            nextEl: '.letters__swiper .swiper-button-next',
+            prevEl: '.letters__swiper .swiper-button-prev',
+        },
+        // If we need pagination
+        pagination: {
+            el: '.letters__swiper .swiper-pagination',
+            type: 'fraction',
+            formatFractionCurrent: function (number) {
+                return ('0' + number).slice(-2);
+            },
+            formatFractionTotal: function (number) {
+                return ('0' + number).slice(-2);
+            },
+            renderFraction: function (currentClass, totalClass) {
+                return '<span class="' + currentClass + '"></span>' +
+                    ' / ' +
+                    '<span class="' + totalClass + '"></span>';
+            }
+        },
+
+    });
+    var swiperLetters = new Swiper(".letters__swiper", {
+        loop: false,
+        centeredSlides: true,
+        thumbs: {
+            swiperDescr: swiperLettersContent
+        },
+        spaceBetween: 100,
+        slidesPerView: 1,
+        effect: 'fade',
+
+        navigation: {
+            nextEl: '.letters__swiper .swiper-button-next',
+            prevEl: '.letters__swiper .swiper-button-prev',
+        },
+        // If we need pagination
+        pagination: {
+            el: '.letters__swiper .swiper-pagination',
+            type: 'fraction',
+            formatFractionCurrent: function (number) {
+                return ('0' + number).slice(-2);
+            },
+            formatFractionTotal: function (number) {
+                return ('0' + number).slice(-2);
+            },
+            renderFraction: function (currentClass, totalClass) {
+                return '<span class="' + currentClass + '"></span>' +
+                    ' / ' +
+                    '<span class="' + totalClass + '"></span>';
+            }
+        },
+    });
 
     // const readmoreBtn = document.querySelector('#readmore');
     // const readmoreText = document.querySelector('.hidden');
@@ -288,5 +347,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         }
     })
+    if (document.querySelectorAll('[data-fancybox]')) {
+        Fancybox.bind('[data-fancybox]', {
+        });
+    }
+
 })
 
