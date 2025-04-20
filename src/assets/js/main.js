@@ -125,6 +125,17 @@ document.addEventListener('DOMContentLoaded', function () {
         pagination: {
             el: '.swiper-about .swiper-pagination',
             type: 'fraction',
+            formatFractionCurrent: function (number) {
+                return ('0' + number).slice(-2);
+            },
+            formatFractionTotal: function (number) {
+                return ('0' + number).slice(-2);
+            },
+            renderFraction: function (currentClass, totalClass) {
+                return '<span class="' + currentClass + '"></span>' +
+                    ' / ' +
+                    '<span class="' + totalClass + '"></span>';
+            }
         },
     });
     var swiperCases = new Swiper(".swiper-cases", {
@@ -142,6 +153,45 @@ document.addEventListener('DOMContentLoaded', function () {
         pagination: {
             el: '.swiper-cases .swiper-pagination',
             type: 'fraction',
+            formatFractionCurrent: function (number) {
+                return ('0' + number).slice(-2);
+            },
+            formatFractionTotal: function (number) {
+                return ('0' + number).slice(-2);
+            },
+            renderFraction: function (currentClass, totalClass) {
+                return '<span class="' + currentClass + '"></span>' +
+                    ' / ' +
+                    '<span class="' + totalClass + '"></span>';
+            }
+        },
+    });
+    var swiperQuality = new Swiper(".quality-swiper", {
+        loop: false,
+        centeredSlides: true,
+        spaceBetween: 100,
+        slidesPerView: 1,
+        effect: 'fade',
+
+        navigation: {
+            nextEl: '.quality-swiper .swiper-button-next',
+            prevEl: '.quality-swiper .swiper-button-prev',
+        },
+        // If we need pagination
+        pagination: {
+            el: '.quality-swiper .swiper-pagination',
+            type: 'fraction',
+            formatFractionCurrent: function (number) {
+                return ('0' + number).slice(-2);
+            },
+            formatFractionTotal: function (number) {
+                return ('0' + number).slice(-2);
+            },
+            renderFraction: function (currentClass, totalClass) {
+                return '<span class="' + currentClass + '"></span>' +
+                    ' / ' +
+                    '<span class="' + totalClass + '"></span>';
+            }
         },
     });
 
