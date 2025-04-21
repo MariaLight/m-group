@@ -662,6 +662,9 @@ textarea {
 .description p:not(:last-child) {
     margin-bottom: 1.6rem;
 }
+/* .description  {
+    text-wrap: balance;
+} */
 
 
 .dropdown-button {
@@ -2598,7 +2601,7 @@ input[type=range]::-webkit-slider-thumb {
     color: #2A2F4766;
 }
 
-.swiper-pagination-current {
+.swiper-quality-controls .swiper-pagination-current {
     color: var(--green);
 }
 
@@ -2961,4 +2964,8 @@ a.light {
     opacity: 0.5;
     text-decoration: underline;
     text-underline-offset: 2px;
+}
+
+.text-align-center {
+    text-align: center;
 }

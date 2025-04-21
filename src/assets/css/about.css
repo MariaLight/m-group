@@ -1,0 +1,39 @@
+.team__images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.1rem;
+    margin-top: 5.5rem;
+    margin-bottom: 4.5rem;
+}
+
+.team__image {
+    border-radius: 1.5rem;
+    overflow: hidden;
+    height: 33.1rem;
+}
+
+.about__main__cta {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 4rem;
+    justify-content: space-between;
+}
+
+.swiper-about {
+    margin-bottom: 7rem;
+}
+.about__main__cta .main-btn {
+    flex-shrink: 0;
+}
+.about__main__cta .description {
+    text-wrap: balance;
+    max-width: 51.6rem;
+}
+.about__main__cta  span {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    max-width: 27.2rem;
+    text-wrap: balance;
+}
