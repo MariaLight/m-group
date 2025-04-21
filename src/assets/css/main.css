@@ -3071,19 +3071,89 @@ a.light {
 .how__inner .contacts__footer__text {
     text-align: center;
 }
-.how__content .description  {
+
+.how__content .description {
     margin-bottom: 4rem;
 }
+
 .how__content .description li {
     display: inline-block;
 }
+
 .how__content .description li::before {
     content: '';
     background-color: #fff;
     display: inline-block;
     transform: translateY(-50%);
 }
+
 .how__content .free-delivery__specialist__text {
     font-size: 1.6rem;
-font-weight: 500;
+    font-weight: 500;
+}
+
+
+
+.services {
+    padding: 6rem 0 10rem;
+}
+
+.services__title {
+    font-size: 2.2rem;
+    margin-bottom: 4rem;
+}
+
+.services__text {
+    font-size: 1.8rem;
+}
+
+.services__text li:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+.services__text li {
+    padding-left: 3rem;
+    position: relative;
+    display: block;
+}
+
+.services__text li::before {
+    content: '';
+    border-radius: 50%;
+    background-color: var(--green);
+    width: 1rem;
+    height: 1rem;
+    display: block;
+    top: 1rem;
+    left: 0;
+    position: absolute;
+    margin-top: 0;
+    margin-right: 0;
+}
+
+.services__text h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 2.9rem;
+}
+
+.services__text h3:not(:first-child) {
+    margin-top: 4.5rem;
+
+}
+
+.services__text ul:not(:last-child) {
+    margin-bottom: 4rem;
+}
+
+.feedback {
+    padding: 7rem 10rem;
+}
+
+.feedback__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem 2.7rem;
+    margin-top: 8.5rem;
 }
