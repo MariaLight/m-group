@@ -1,0 +1,59 @@
+.dealer {
+    background-image: url(../img/dealer/dealer-full-bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding: 6.3rem 0 11.7rem;
+}
+
+.dealer__inner {
+    max-width: 82rem;
+}
+
+.dealer .subtitle {
+    text-align: left;
+    margin-bottom: 4rem;
+}
+
+.dealer .title {
+    font-size: 3.4rem;
+    margin-bottom: 4.1rem;
+}
+
+.dealer .services__text {
+    font-size: 1.6rem;
+
+}
+
+.dealer .services__text h3 {
+    font-weight: 800;
+}
+
+.dealer .services__text li:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.column {
+    max-width: 57rem;
+}
+
+.column .title {
+margin-bottom: 2.5rem;
+}
+.pros .services__text  li {
+    padding-left: 2.5rem;
+}
+.pros .services__text  li:not(:last-child){
+margin-bottom: 1rem;
+}
+.pros .services__text ul{
+padding-left: 0;
+}
+.pros .services__text h3{
+font-weight: 800;
+margin-bottom: 1.6rem;
+}
+
+.pros__text {
+    max-width: 35rem;
+}
