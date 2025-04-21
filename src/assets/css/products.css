@@ -7,11 +7,104 @@
     font-weight: 400;
     padding-top: 5rem;
 }
+
 .breadcrumbs svg {
     width: 1.5rem;
     height: 1.5rem;
 }
+
 .breadcrumbs>span:last-child {
     color: var(--green);
     font-weight: 700;
+}
+
+
+/* Content  */
+.products__content {
+    padding: 6rem 0 10rem;
+}
+
+.products__content .title {
+    font-size: 3.6rem;
+    margin-bottom: 3rem;
+    text-wrap: balance;
+    letter-spacing: -0.01em;
+}
+
+.products__content__header {
+    margin-bottom: 7rem;
+}
+
+.products__content__categories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 7.5rem 4rem;
+    counter-reset: cat 0;
+
+}
+
+.products__content__item {
+    padding: 2rem 3rem 2rem 2.5rem;
+    position: relative;
+    border: 2px solid #30354E;
+    border-radius: 1rem;
+    background: #F1F3F5;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 3rem;
+    counter-increment: cat 1;
+    transition: all .2s linear;
+}
+
+.products__content__item::after {
+    content: counter(cat, decimal-leading-zero);
+    color: var(--green);
+    opacity: 0.3;
+    position: absolute;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    font-size: 2.5rem;
+    font-family: 'DrukWideCyr';
+}
+
+.products__content__link {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    z-index: 2;
+}
+
+@media (hover:hover) {
+    .products__content__item:has(.products__content__link:hover) {
+        opacity: 0.7;
+    }
+}
+
+.products__content__img {
+    width: 22rem;
+    height: 18.5rem;
+    border: 0.5px solid #001952;
+    background-color: #FFFFFFB2;
+    border-radius: 1.1rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.products__content__img img {
+    object-fit: contain;
+    max-width: 90%;
+    max-height: 90%;
+    object-position: center;
+}
+
+.products__content__name {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: var(--blue);
+    font-weight: 700;
+    font-family: 'DrukWideCyr';
 }
