@@ -1,0 +1,60 @@
+.architectors {
+padding: 6.6rem 0 7rem;
+}
+
+.contacts__footer__text {
+    color: var(--blue);
+}
+.how {
+    margin: 0 7rem;
+}
+.how .title {
+    font-size: 2.3rem;
+}
+.services__text li:not(:last-child) {
+    margin-bottom: 1rem;
+}
+.services__text {
+    font-size: 1.6rem;
+}
+.architectors__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6.5rem;
+    align-items: start;
+    margin-top: 6rem;
+}
+
+.architectors h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.arch__swiper {
+    width: 49.3rem;
+    overflow: hidden;
+}
+
+.arch__card__link {
+    width: 100%;
+    display: block;
+    height: 41.3rem;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+.arch__card__link img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.arch__card {
+    width: 100%;
+
+}
+
+.how {
+    margin-bottom: 6.1rem;
+}

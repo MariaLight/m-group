@@ -254,6 +254,37 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
+    var swiperArch = new Swiper(".arch__swiper", {
+        loop: false,
+        centeredSlides: true,
+        direction: 'horizontal',
+        spaceBetween: 10,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        // effect: 'fade',
+
+        navigation: {
+            nextEl: '.arch__swiper .swiper-button-next',
+            prevEl: '.arch__swiper .swiper-button-prev',
+        },
+        // If we need pagination
+        pagination: {
+            el: '.arch__swiper .swiper-pagination',
+            type: 'fraction',
+            formatFractionCurrent: function (number) {
+                return ('0' + number).slice(-2);
+            },
+            formatFractionTotal: function (number) {
+                return ('0' + number).slice(-2);
+            },
+            renderFraction: function (currentClass, totalClass) {
+                return '<span class="' + currentClass + '"></span>' +
+                    ' / ' +
+                    '<span class="' + totalClass + '"></span>';
+            }
+        },
+    });
+
     // const readmoreBtn = document.querySelector('#readmore');
     // const readmoreText = document.querySelector('.hidden');
     // if (readmoreBtn) {
@@ -310,43 +341,45 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     const quizForm = document.querySelector('#quiz');
-    const quizSteps = quizForm.querySelectorAll('.step');
-    const quizPrevButton = quizForm.querySelector('.quiz__prev__btn');
-    const quizNextButton = quizForm.querySelector('.quiz__next__btn');
-    let counter = 1;
-    const stepsAmount = quizSteps.length;
+    if (quizForm) {
+        const quizSteps = quizForm.querySelectorAll('.step');
+        const quizPrevButton = quizForm.querySelector('.quiz__prev__btn');
+        const quizNextButton = quizForm.querySelector('.quiz__next__btn');
+        let counter = 1;
+        const stepsAmount = quizSteps.length;
 
-    const removeActiveStyles = (elems) => elems.forEach((item) => item.classList.remove('active'));
+        const removeActiveStyles = (elems) => elems.forEach((item) => item.classList.remove('active'));
 
-    const addActiveStyleOnQuizStep = (elems, counter) => {
-        removeActiveStyles(elems);
-        console.log(elems);
-        elems[counter - 1].classList.add('active');
+        const addActiveStyleOnQuizStep = (elems, counter) => {
+            removeActiveStyles(elems);
+            console.log(elems);
+            elems[counter - 1].classList.add('active');
+        }
+
+        quizNextButton.addEventListener('click', () => {
+            counter += 1;
+            addActiveStyleOnQuizStep(quizSteps, counter);
+            if (counter > 1) {
+                quizPrevButton.disabled = false;
+            }
+            if (stepsAmount === counter) {
+                quizNextButton.querySelector('span').textContent = 'Отправить данные';
+                quizNextButton.classList.add('send-quiz');
+            }
+        })
+        quizPrevButton.addEventListener('click', () => {
+            counter -= 1;
+            addActiveStyleOnQuizStep(quizSteps, counter);
+            if (counter === 1) {
+                quizPrevButton.disabled = true;
+            }
+            if (stepsAmount !== counter) {
+                quizNextButton.querySelector('span').textContent = 'Далее';
+                quizNextButton.classList.remove('send-quiz');
+
+            }
+        })
     }
-
-    quizNextButton.addEventListener('click', () => {
-        counter += 1;
-        addActiveStyleOnQuizStep(quizSteps, counter);
-        if (counter > 1) {
-            quizPrevButton.disabled = false;
-        }
-        if (stepsAmount === counter) {
-            quizNextButton.querySelector('span').textContent = 'Отправить данные';
-            quizNextButton.classList.add('send-quiz');
-        }
-    })
-    quizPrevButton.addEventListener('click', () => {
-        counter -= 1;
-        addActiveStyleOnQuizStep(quizSteps, counter);
-        if (counter === 1) {
-            quizPrevButton.disabled = true;
-        }
-        if (stepsAmount !== counter) {
-            quizNextButton.querySelector('span').textContent = 'Далее';
-            quizNextButton.classList.remove('send-quiz');
-
-        }
-    })
     if (document.querySelectorAll('[data-fancybox]')) {
         Fancybox.bind('[data-fancybox]', {
         });
