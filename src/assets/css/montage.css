@@ -1,0 +1,60 @@
+.montage {
+    background-image: url(../img/montage/montage-single.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top left;
+    margin: 0;
+}
+.montage__inner  {
+    padding-left: 0;
+}
+.montage .subtitle {
+    right: 0;
+    text-align: right;
+}
+
+.montage .title {
+    max-width: 67rem;
+    margin-bottom: 3rem;
+}
+.montage__list {
+    padding-left: 39rem;
+    margin-top: 9rem;
+}
+.text {
+    padding: 6rem 0;
+    text-wrap: balance;
+}
+
+.services {
+    padding: 6rem 0 10rem;
+}
+
+.services__title {
+    font-size: 2.2rem;
+    margin-bottom: 4rem;
+}
+.services__text {
+    font-size: 1.8rem;
+}
+.services__text li:not(:last-child) {
+    margin-bottom: 3rem;
+}
+.services__text li {
+    padding-left: 3rem;
+    position: relative;
+    display: block;
+}
+.services__text li::before {
+content: '';
+border-radius: 50%;
+background-color: var(--green);
+width: 1rem;
+height: 1rem;
+display: block;
+top: 1rem;
+left: 0;
+position: absolute;
+margin-top: 0;
+margin-right: 0;
+}
