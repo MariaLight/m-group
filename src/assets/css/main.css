@@ -3193,7 +3193,8 @@ a.light {
 
 .modal__content .form__input {
     padding: 2.4rem 5.4rem 2rem;
-} 
+}
+
 .form__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -3204,7 +3205,8 @@ a.light {
     background-color: #485076;
     width: 100%;
 }
-.agreement__wrapper{
+
+.agreement__wrapper {
     display: flex;
     align-items: center;
     font-size: 1.4rem;
@@ -3228,9 +3230,40 @@ a.light {
     width: auto;
     flex-shrink: 0;
 }
+
 .modal__content__2 .title {
     max-width: 48.8rem;
 }
+
 .modal__content__2 .description {
     max-width: 48.8rem;
 }
+
+/* Cookies  */
+.cookies {
+    position: fixed;
+    bottom: 2rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 99;
+
+}
+
+.cookies.disabled {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.cookies__inner {
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: 2.5rem 5.5rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    text-wrap: balance;
+
+}
+
