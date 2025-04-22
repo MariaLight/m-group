@@ -538,8 +538,7 @@ textarea {
     z-index: 999;
     inset: 0;
     bottom: initial;
-    background: #DFDFDF4D;
-    backdrop-filter: blur(30px);
+    background: #ffffff80;
     width: 100%;
     height: 100vh;
     display: -webkit-box;
@@ -565,15 +564,29 @@ textarea {
 
 .modal__inner {
     position: relative;
-    max-width: 72rem;
+    max-width: 116rem;
     width: fit-content
 }
 
 .modal__content {
-    border-radius: 1rem;
-    padding: 2.8rem 4.6rem 3.3rem 3.7rem;
-    background-color: #fff;
+    border-radius: 2rem;
+    padding: 6rem 10rem;
+    background-color: var(--blue);
     width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+}
+
+.modal__content__1 {
+    background-image: url(../img/base/modal-bg-1.png);
+    padding-left: 50.6rem;
+}
+
+.modal__content__2 {
+    background-image: url(../img/base/modal-bg-2.png);
+    padding-right: 21rem;
 }
 
 .modal__content::-webkit-scrollbar {
@@ -583,8 +596,8 @@ textarea {
 
 .modal__close {
     cursor: pointer;
-    width: 3rem;
-    height: 3rem;
+    width: 4.6rem;
+    height: 4.6rem;
     border-radius: 50%;
     background-color: transparent;
     display: -webkit-box;
@@ -598,17 +611,17 @@ textarea {
     justify-content: center;
     position: absolute;
     z-index: 10;
-    top: 1rem;
+    top: 3.4rem;
     -webkit-transition: -webkit-transform .2s;
     transition: transform .2s;
     transition: transform .2s, -webkit-transform .2s;
-    right: 1rem;
+    right: 3.4rem;
     color: #000;
 }
 
 .modal__close svg {
-    width: 1.2rem;
-    height: 1.2rem
+    width: 1.8rem;
+    height: 1.8rem
 }
 
 @media (max-width: 640px) {
@@ -3170,4 +3183,54 @@ a.light {
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem 2.7rem;
     margin-top: 8.5rem;
+}
+
+/* Modals   */
+.modal__content .description {
+    margin-bottom: 3.5rem;
+    text-wrap: balance;
+}
+
+.modal__content .form__input {
+    padding: 2.4rem 5.4rem 2rem;
+} 
+.form__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1.2rem;
+}
+
+.form__btn {
+    background-color: #485076;
+    width: 100%;
+}
+.agreement__wrapper{
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #CBD6DB;
+    padding-left: 1.2rem;
+}
+
+.form__box__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 1.2rem;
+    padding-top: 3.4rem;
+    border-top: 1px solid #DCE4EC30;
+    border-radius: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.modal__content__2 .form__btn {
+    width: auto;
+    flex-shrink: 0;
+}
+.modal__content__2 .title {
+    max-width: 48.8rem;
+}
+.modal__content__2 .description {
+    max-width: 48.8rem;
 }
