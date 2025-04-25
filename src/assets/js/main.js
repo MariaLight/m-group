@@ -367,8 +367,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 quizPrevButton.disabled = false;
             }
             if (stepsAmount === counter) {
+                quizPrevButton.classList.add('d-none');
+
                 quizNextButton.querySelector('span').textContent = 'Отправить данные';
-                quizNextButton.classList.add('send-quiz');
+                setTimeout(() => {
+                    quizNextButton.type = "submit";
+                }, 0);
+
             }
         })
         quizPrevButton.addEventListener('click', () => {
@@ -379,7 +384,9 @@ document.addEventListener('DOMContentLoaded', function () {
             }
             if (stepsAmount !== counter) {
                 quizNextButton.querySelector('span').textContent = 'Далее';
-                quizNextButton.classList.remove('send-quiz');
+                quizNextButton.type = "button";
+                quizPrevButton.classList.remove('d-none');
+
 
             }
         })
