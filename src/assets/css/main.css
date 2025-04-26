@@ -2238,7 +2238,7 @@ input[type=range]::-webkit-slider-thumb {
 @media (max-width: 640px) {
     .about {
         padding: 3.5rem 0;
-        
+
     }
 
     .about .subtitle {
@@ -2342,7 +2342,7 @@ input[type=range]::-webkit-slider-thumb {
 @media (max-width: 640px) {
     .about__callback {
         border-radius: 2rem;
-        padding: 5rem 3rem 30.4rem 3rem ;
+        padding: 5rem 3rem 30.4rem 3rem;
         margin: 2rem 0 3.5rem;
         flex-direction: column;
         align-items: start;
@@ -2533,6 +2533,120 @@ input[type=range]::-webkit-slider-thumb {
     box-shadow: 0px 12.41px 42.2px 0px #0207111F;
 
 }
+
+@media(max-width: 640px) {
+    .delivery {
+        background-size: 390%;
+        background-position: bottom -30.6rem left -20.2rem;
+        padding: 3.5rem 0;
+    }
+
+    .delivery__inner {
+        padding-left: 0;
+        position: relative;
+    }
+
+    .delivery__subtitle {
+        position: static;
+        text-align: center;
+        margin-bottom: 2.8rem;
+    }
+
+    .delivery .title {
+        text-align: center;
+    }
+
+    .delivery__decsription {
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+
+    .delivery__cost {
+        max-width: 100%;
+        margin-left: 0;
+        max-width: 31rem;
+        margin: 0 auto 3.3rem auto;
+    }
+
+    .delivery__cost__title {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        justify-content: center;
+    }
+
+    .delivery__cost__title::before {
+        content: none;
+    }
+
+    .delivery__cost__list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .delivery__cost__item {
+        padding: 1.7rem 2rem;
+        font-size: 1.4rem;
+    }
+
+    .delivery__cost__item__price {
+        margin-bottom: .8rem;
+    }
+
+  .delivery__cost .main-btn {
+width: 100%;
+  }
+
+    .delivery__cost__text {
+        padding-left: 0;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .delivery__cost__text::before {
+        content: none;
+    }
+
+    .delivery__areas {
+        width: 27.8rem;
+        height: 27.8rem;
+        bottom: auto;
+        left: auto;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .delivery__area__moscow {
+        padding: .3rem .8rem;
+        top: 7.6rem;
+        left: 4.8rem;
+    }
+
+    .delivery__area {
+        padding: .3rem .8rem;
+        font-size: 1.4rem;
+    }
+
+    .delivery__area__2 {
+        bottom: 9.4rem;
+        right: 1.8rem;
+    }
+
+    .delivery__area__3 {
+        bottom: 1.5rem;
+        right: 6.4rem;
+    }
+
+    .delivery__area::after {
+        border: .5rem solid transparent;
+        border-top: .5rem solid var(--white);
+        bottom: -.8rem;
+
+    }
+}
+
+/* Монтаж */
 
 .montage {
     background-image: url(../img/base/montage-bg.png);
