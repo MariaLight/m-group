@@ -4375,6 +4375,80 @@ input[type=range]::-webkit-slider-thumb {
     height: 1.6rem;
 }
 
+@media (max-width: 640px) {
+    .contacts {
+        padding: 7rem 0 5rem;
+    }
+
+    .contacts .title {
+        margin-bottom: 2rem;
+    }
+
+    .contacts .description {
+        margin-bottom: 4rem;
+    }
+
+    .contacts__items {
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 4rem;
+    }
+    .contacts__icon{
+        flex-shrink: 0;
+    }
+
+    .contacts__footer {
+        flex-direction: column-reverse;
+        gap: 5.1rem;
+    }
+
+    .contacts__map {
+        width: 34rem;
+        height: 55rem;
+    }
+
+    .contacts__footer__content {
+        width: 100%;
+        padding: 3rem 3.6rem;
+    }
+
+    .contacts__footer__subtitle {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .contacts__footer__text {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .contacts__form .input-wrapper::before {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+
+    .contacts__btn {
+        font-size: 1.6rem;
+        margin-top: 2.1rem;
+    }
+
+    .contacts__btn svg {
+        width: 1rem;
+        height: 1rem;
+    }
+    .contacts .contacts__link {
+        font-size: 1.6rem;
+
+
+    }
+    .contacts__subtitle {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+
+}
+
 /* Footer  */
 .footer {
     background-color: #0C1C2B;
