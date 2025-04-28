@@ -4635,6 +4635,38 @@ a.light {
     font-weight: 500;
 }
 
+@media (max-width: 640px) {
+    .reks {
+        padding: 7rem 0;
+    }
+
+    .reks .container {
+        width: 100%;
+        padding: 0 .5rem;
+    }
+
+    .reks .title {
+        padding: 0 2rem;
+        text-align: left;
+    }
+
+    .reks__table {
+        margin-top: 2rem;
+    }
+
+
+    .reks__title {
+        padding: 3.3rem 1rem;
+        width: 13.5rem;
+        font-size: 1.2rem;
+    }
+
+    .reks__description {
+        font-size: 1.2rem;
+        padding: 3.5rem 1rem;
+    }
+}
+
 /* How  */
 .how {
     background-image: url(../img/montage/montage-2-bg.png);
