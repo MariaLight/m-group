@@ -3518,6 +3518,99 @@ input[type=range]::-webkit-slider-thumb {
 
 }
 
+@media (max-width: 640px) {
+    .free-delivery {
+        background-image: url(../img/base/free-delivery-mobile-bg.png);
+        background-position: left bottom;
+        margin: 3.5rem 1rem 20rem;
+        color: #fff;
+        position: relative;
+
+    }
+
+    .free-delivery__content {
+        padding: 5rem 2rem 50rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .free-delivery .title {
+        margin-bottom: 2rem;
+    }
+
+    .free-delivery__subtitle {
+        font-size: 1.4rem;
+        align-items: center;
+        margin-bottom: 1.6rem;
+    }
+
+    .free-delivery__subtitle::before {
+        width: 2rem;
+    }
+
+    .free-delivery__text {
+        font-size: 1.4rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .free-delivery__specialist {
+        gap: 1.4rem;
+    }
+
+    .free-delivery__specialist__icon {
+        width: 5.4rem;
+        height: 5.4rem;
+    }
+
+    .free-delivery__specialist__icon::after {
+        width: .8rem;
+        height: .8rem;
+        bottom: .7rem;
+        right: .7rem;
+        border: .3rem solid var(--green);
+    }
+
+    .free-delivery__specialist__text {
+        font-size: 1.4rem;
+    }
+
+    .free-delivery__cta {
+        padding: 0 1rem;
+        border-top: none;
+        position: absolute;
+        bottom: -16.2rem;
+    }
+
+    .free-delivery__cta__inner {
+        padding: 3.5rem 2.2rem;
+        background: #F1F3F5;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .free-delivery__cta__title {
+        font-size: 1.3rem;
+        text-align: center;
+    }
+
+    .free-delivery__cta__title::before {
+        content: none;
+
+    }
+
+    .free-delivery__cta__text {
+        font-size: 1.4rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .free-delivery__cta__button {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        margin: 0 auto;
+
+    }
+}
+
 /* Blog  */
 .blog {
     padding: 10rem 0;
@@ -3654,6 +3747,9 @@ input[type=range]::-webkit-slider-thumb {
 
 .blog__cta .free-delivery__cta__button {
     text-transform: uppercase;
+}
+@media (max-width:640px) {
+    
 }
 
 /* Quality  */
