@@ -4163,6 +4163,83 @@ input[type=range]::-webkit-slider-thumb {
     visibility: hidden;
 }
 
+.letters__cta--mobile {
+    display: none;
+}
+
+@media (max-width: 640px) {
+
+
+    .letters {
+        padding: 5rem 2rem;
+        background-image: url(../img/base/letters-bg-mobile.png);
+    }
+
+    .letters__content {
+        width: 100%;
+    }
+
+    .letters__inner {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .letters__swiper {
+        width: 32rem;
+
+    }
+
+    .letters__card__link {
+        border-radius: 1.2rem;
+        border: .8rem solid #1C202F;
+        height: 45rem;
+    }
+
+    .letters__name {
+        margin-bottom: 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .letters__text {
+        font-size: 1.4rem;
+    }
+
+    .letters-card__more {
+        margin: 4rem 0 0 0;
+        width: 100%;
+    }
+
+    .letters__cta {
+        flex-direction: column;
+        padding: 2rem 1.7rem;
+
+        gap: 2.5rem;
+    }
+
+    .letters__cta::before {
+        content: none;
+    }
+
+    .letters__cta::after {
+        top: 8rem;
+    }
+
+    .letters__cta .letters__text {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+
+    .letters__cta--mobile {
+        display: flex;
+    }
+
+    .letters__cta--desctop {
+        display: none;
+    }
+}
+
 /* Contacts  */
 .contacts {
     background-image: url(../img/base/contacts-bg.png);
