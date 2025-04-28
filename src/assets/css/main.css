@@ -4681,6 +4681,34 @@ a.light {
     font-weight: 500;
 }
 
+@media (max-width: 640px) {
+    .how {
+        background-image: none;
+        background-color: var(--blue);
+        border-radius: 2rem;
+        padding: 0;
+    }
+
+    .how__inner {
+        padding: 5rem 1rem;
+        display: flex;
+        align-items: start;
+        flex-direction: column-reverse;
+        gap: 4rem;
+    }
+
+    .how__inner .contacts__footer__subtitle {
+        font-size: 1.6rem;
+    }
+
+    .how__content .free-delivery__specialist__text {
+        font-size: 1.3rem;
+    }
+
+    .how .contacts__footer__text {
+        color: var(--blue);
+    }
+}
 
 
 .services {
@@ -4745,6 +4773,54 @@ a.light {
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem 2.7rem;
     margin-top: 8.5rem;
+}
+
+@media (max-width: 640px) {
+
+    .services {
+        padding: 7rem 0;
+    }
+
+    .services__title {
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+    }
+
+    .services__text {
+        font-size: 1.4rem;
+    }
+
+    .services__text li:not(:last-child) {
+        margin-bottom: 2rem;
+    }
+
+    .services__text li {
+        padding-left: 2.5rem;
+    }
+
+    .services__text h3 {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    .services__text h3:not(:first-child) {
+        margin-top: 3rem;
+
+    }
+
+    .services__text ul:not(:last-child) {
+        margin-bottom: 4rem;
+    }
+
+    .feedback {
+        padding: 3.5rem 0;
+    }
+
+    .feedback__list {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3;
+        margin-top: 5rem;
+    }
 }
 
 /* Modals   */
