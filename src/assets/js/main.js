@@ -87,34 +87,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
-    // const headerLinks = document.querySelectorAll('.header__link');
-    // headerLinks.forEach((item) => {
-    //     item.addEventListener('click', () => {
-    //         const dropdown = item.parentNode.querySelector('.header__dropdown');
-    //         if (dropdown) {
-    //             dropdown.classList.toggle('active');
-    //         }
-    //     })
-    // })
-
-
-    // var details = document.querySelectorAll("details");
-    // for (let i = 0; i < details.length; i++) {
-    //     details[i].addEventListener("toggle", accordion);
-    // }
-    // function accordion(event) {
-    //     if (!event.target.open) return;
-    //     var details = event.target.parentNode.children;
-    //     for (let i = 0; i < details.length; i++) {
-    //         if (details[i].tagName != "DETAILS" ||
-    //             !details[i].hasAttribute('open') ||
-    //             event.target == details[i]) {
-    //             continue;
-    //         }
-    //         details[i].removeAttribute("open");
-    //     }
-    // }
-
     var swiper = new Swiper(".swiper-about", {
         loop: true,
         centeredSlides: true,
@@ -142,34 +114,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         },
     });
-    var swiperCases = new Swiper(".swiper-cases", {
-        loop: false,
-        centeredSlides: true,
-        spaceBetween: 100,
-        slidesPerView: 1,
-        effect: 'fade',
 
-        navigation: {
-            nextEl: '.swiper-cases .swiper-button-next',
-            prevEl: '.swiper-cases .swiper-button-prev',
-        },
-        // If we need pagination
-        pagination: {
-            el: '.swiper-cases .swiper-pagination',
-            type: 'fraction',
-            formatFractionCurrent: function (number) {
-                return ('0' + number).slice(-2);
-            },
-            formatFractionTotal: function (number) {
-                return ('0' + number).slice(-2);
-            },
-            renderFraction: function (currentClass, totalClass) {
-                return '<span class="' + currentClass + '"></span>' +
-                    ' / ' +
-                    '<span class="' + totalClass + '"></span>';
-            }
-        },
-    });
+    
     var swiperQuality = new Swiper(".quality-swiper", {
         loop: false,
         centeredSlides: true,
