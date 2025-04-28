@@ -1,22 +1,27 @@
 .architectors {
-padding: 6.6rem 0 7rem;
+    padding: 6.6rem 0 7rem;
 }
 
 .contacts__footer__text {
     color: var(--blue);
 }
+
 .how {
     margin: 0 7rem;
 }
+
 .how .title {
     font-size: 2.3rem;
 }
+
 .services__text li:not(:last-child) {
     margin-bottom: 1rem;
 }
+
 .services__text {
     font-size: 1.6rem;
 }
+
 .architectors__inner {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -43,7 +48,9 @@ padding: 6.6rem 0 7rem;
     height: 41.3rem;
     border-radius: 2rem;
     overflow: hidden;
+
 }
+
 .arch__card__link img {
     object-fit: cover;
     width: 100%;
@@ -57,4 +64,50 @@ padding: 6.6rem 0 7rem;
 
 .how {
     margin-bottom: 6.1rem;
+}
+
+@media (max-width: 640px) {
+    .architectors {
+        padding: 2rem 0 7rem;
+    }
+
+    .how {
+        margin: 0;
+    }
+
+    .how .title {
+        font-size: 1.8rem;
+    }
+
+    .services__text li:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    .services__text {
+        font-size: 1.4rem;
+    }
+
+    .architectors__inner {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5rem;
+        margin-top: 5rem;
+    }
+
+    .architectors h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .arch__swiper {
+        width: 34rem;
+    }
+
+    .arch__card__link {
+        height: 28.5rem;
+        width: 34rem;
+    }
+    
+    .how {
+        margin-bottom: 5rem;
+    }
 }
