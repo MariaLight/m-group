@@ -3303,6 +3303,83 @@ input[type=range]::-webkit-slider-thumb {
     border-radius: 2rem;
 }
 
+@media (max-width: 640px) {
+    .cases {
+        padding: 3.5rem 0;
+    }
+
+    .cases .subtitle {
+        margin-bottom: 2.8rem;
+
+    }
+
+    .cases .title {
+        margin-bottom: 2rem;
+    }
+
+    .cases .description {
+        text-wrap: balance;
+        margin-bottom: 5.6rem;
+
+    }
+
+    .cases__item {
+        grid-template-columns: repeat(1, 1fr);
+
+        gap: 1rem;
+    }
+
+    .cases__blocks {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 1rem .7rem;
+    }
+
+    .cases__block {
+        border-radius: 2rem;
+        padding: 2rem 1rem;
+        font-size: 1.4rem;
+    }
+
+    .cases__span {
+        font-size: 1.4rem;
+        margin-bottom: .8rem;
+        text-align: center;
+    }
+
+    .cases__name {
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .cases__block__image {
+        width: 8rem;
+        height: 8rem;
+    }
+   
+    .swiper-cases-controls {
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+    }
+
+    .cases__list .cases__item:nth-child(2n) .cases__image {
+        order: 1;
+    }
+
+    .cases__list .cases__item:nth-child(2n) .cases__content {
+        order: 0;
+    }
+
+    .cases__list .cases__item {
+        gap: 1rem;
+        position: relative;
+    }
+
+}
+
 /* Free delivery  */
 .free-delivery {
     background-color: var(--blue);
