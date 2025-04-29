@@ -4963,3 +4963,72 @@ a.light {
 #city-modal .modal__close {
     color: var(--blue);
 }
+
+/* Breadcrumbs  */
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: 400;
+    padding-top: 5rem;
+    flex-wrap: wrap;
+}
+
+.breadcrumbs svg {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.breadcrumbs>span:last-child {
+    color: var(--green);
+    font-weight: 700;
+}
+
+@media (max-width: 640px) {
+    .breadcrumbs {
+        font-size: 1.4rem;
+        padding-top: 4rem;
+        gap: 1rem;
+    }
+}
+
+/* Article-single  */
+.article-single {
+    padding: 7rem 0;
+}
+.article-single .architectors__inner{
+    margin-bottom: 5rem;
+}
+.article-single .description h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+.article-single .description li::before{
+    content: '';
+    background-color: var(--green);
+}
+.article-single .description ul{
+    margin-bottom: 2rem;
+}
+.article-single .description a{
+    text-decoration: underline;
+}
+@media (max-width: 640px) {
+    .article-single {
+        padding: 3rem 0 7rem;
+    }
+    .article-single .architectors__inner{
+        margin-bottom: 2rem;
+    }
+    .article-single .description h3{
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+    .article-single .description ul{
+        margin-bottom: 1.5rem;
+    }
+}
