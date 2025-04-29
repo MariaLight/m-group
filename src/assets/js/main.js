@@ -60,9 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     } catch (error) {
     }
-
-
-
     const page = document.querySelector('.wrapper');
     const burgerBtn = document.querySelector('#burger');
     const burgerCloseBtn = document.querySelector('#burger-close');
@@ -115,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
-    
+
     var swiperQuality = new Swiper(".quality-swiper", {
         loop: false,
         centeredSlides: true,
@@ -235,44 +232,6 @@ document.addEventListener('DOMContentLoaded', function () {
         },
     });
 
-    // const readmoreBtn = document.querySelector('#readmore');
-    // const readmoreText = document.querySelector('.hidden');
-    // if (readmoreBtn) {
-    //     readmoreBtn.addEventListener('click', () => {
-    //         readmoreText.classList.add('show');
-    //         readmoreBtn.style.display = 'none';
-    //     })
-    // }
-
-    // const showTab = (elTabBtn) => {
-    //     const elTab = elTabBtn.closest('.tab');
-    //     if (elTabBtn.classList.contains('tab-btn-active')) {
-    //         return;
-    //     }
-    //     const targetId = elTabBtn.dataset.targetId;
-    //     const elTabPane = elTab.querySelector(`.tab-pane[data-id="${targetId}"]`);
-    //     if (elTabPane) {
-    //         const elTabBtnActive = elTab.querySelector('.tab-btn-active');
-    //         elTabBtnActive.classList.remove('tab-btn-active');
-    //         const elTabPaneShow = elTab.querySelector('.tab-pane-show');
-    //         elTabPaneShow.classList.remove('tab-pane-show');
-    //         elTabBtn.classList.add('tab-btn-active');
-    //         elTabPane.classList.add('tab-pane-show');
-    //     }
-    // }
-
-    // document.addEventListener('click', (e) => {
-    //     if (e.target && !e.target.closest('.tab-btn')) {
-    //         return;
-    //     }
-    //     const elTabBtn = e.target.closest('.tab-btn');
-    //     showTab(elTabBtn);
-    // });
-    // if (document.querySelectorAll('[data-fancybox]')) {
-    //     Fancybox.bind('[data-fancybox]', {
-    //     });
-    // }
-
     const rangeWrappers = document.querySelectorAll('.quiz__range');
     if (rangeWrappers) {
         rangeWrappers.forEach((item) => {
@@ -337,6 +296,52 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
     }
+
+    function getCookie(name) {
+        let matches = document.cookie.match(new RegExp(
+            "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+        ));
+        return matches ? decodeURIComponent(matches[1]) : undefined;
+    }
+    function setCookie(name, value, options = {}) {
+
+        options = {
+            path: '/'
+        };
+
+        if (options.expires instanceof Date) {
+            options.expires = options.expires.toUTCString();
+        }
+
+        let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+        for (let optionKey in options) {
+            updatedCookie += "; " + optionKey;
+            let optionValue = options[optionKey];
+            if (optionValue !== true) {
+                updatedCookie += "=" + optionValue;
+            }
+        }
+
+        document.cookie = updatedCookie;
+    }
+    function deleteCookie(name) {
+        setCookie(name, "", {
+            'max-age': -1
+        })
+    }
+
+    const cookiesModal = document.querySelector('.cookies');
+    const cookiesBtn = document.querySelector('#cookies-btn');
+
+    if (!getCookie('cookies-accepted')) {
+        setTimeout(() => cookiesModal.classList.remove('disabled'), 1500);
+        cookiesBtn.addEventListener('click', () => {
+            cookiesModal.classList.add('disabled')
+            setCookie('cookies-accepted', true, { secure: true, 'max-age': 3600 });
+        })
+    }
+
     if (document.querySelectorAll('[data-fancybox]')) {
         Fancybox.bind('[data-fancybox]', {
         });

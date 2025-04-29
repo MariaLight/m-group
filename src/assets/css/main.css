@@ -4917,7 +4917,7 @@ a.light {
     right: 0;
     margin: 0 auto;
     z-index: 99;
-
+transition: all .2s linear;
 }
 
 .cookies.disabled {
@@ -4937,6 +4937,26 @@ a.light {
 
 }
 
+@media (max-width: 640px) {
+    .cookies {
+        bottom: 1rem;
+    }
+    .cookies__inner {
+        padding: 2.5rem 1.2rem;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 1.1rem;
+
+    }
+
+    .cookies .main-btn {
+        width: 100%;
+        font-size: 1.4rem;
+        padding: 2rem 2rem;
+    }
+}
 
 /* City modal  */
 
@@ -4998,37 +5018,46 @@ a.light {
 .article-single {
     padding: 7rem 0;
 }
-.article-single .architectors__inner{
+
+.article-single .architectors__inner {
     margin-bottom: 5rem;
 }
-.article-single .description h3{
+
+.article-single .description h3 {
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 800;
     margin-bottom: 2rem;
 }
-.article-single .description li::before{
+
+.article-single .description li::before {
     content: '';
     background-color: var(--green);
 }
-.article-single .description ul{
+
+.article-single .description ul {
     margin-bottom: 2rem;
 }
-.article-single .description a{
+
+.article-single .description a {
     text-decoration: underline;
 }
+
 @media (max-width: 640px) {
     .article-single {
         padding: 3rem 0 7rem;
     }
-    .article-single .architectors__inner{
+
+    .article-single .architectors__inner {
         margin-bottom: 2rem;
     }
-    .article-single .description h3{
+
+    .article-single .description h3 {
         font-size: 1.6rem;
         margin-bottom: 1.5rem;
     }
-    .article-single .description ul{
+
+    .article-single .description ul {
         margin-bottom: 1.5rem;
     }
 }
